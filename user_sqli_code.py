@@ -10,7 +10,7 @@ removeList = "%(){}[]\'\""
 words = word.translate(str.maketrans('', '', removeList))
 print(words)
 
-name = "UPPERCASENAME"
+name = "admin"
 
 password = ""
 
