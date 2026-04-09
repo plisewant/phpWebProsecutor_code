@@ -11,7 +11,7 @@ words = word.translate(str.maketrans('', '', removeList))
 print(words)
 
 
-userName = "Tlqkf"
+userName = "admin"
 
 
 password = ""
