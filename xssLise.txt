@@ -1,0 +1,5 @@
+제목: <script>alert(1)</script>
+글 내용: <script>alert(1)</script>
+댓글: <script>alert(1)</script>
+
+다 쉽게 할 수 있다.
